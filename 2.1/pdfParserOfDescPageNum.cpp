@@ -4,6 +4,7 @@
 
 using std::string;
 
+// Класс для получения страницы описания
 class PDF_Parser {
 public:
     PDF_Parser(poppler::document* doc) : doc(doc) {}
@@ -14,7 +15,7 @@ private:
     int desc_page_num;
 };
 
-
+// Находим страницу с описанием (номер)
 int PDF_Parser::find_description_page_num() {
     // Получаем количество страниц в документе
     int numPages = doc->pages();
